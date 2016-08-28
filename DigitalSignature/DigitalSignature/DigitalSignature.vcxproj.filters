@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Заголовочные файлы\Gost_34_11_94">
+      <UniqueIdentifier>{75621046-dcd1-48cb-9264-ebed7d10be24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Gost_34_11_94">
+      <UniqueIdentifier>{8c29393d-b485-4156-968f-278c4bbd0939}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Gost_34_11_2012">
+      <UniqueIdentifier>{db19b199-7670-4bb3-aa87-db51f6434200}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Gost_34_11_2012">
+      <UniqueIdentifier>{ebfa2ede-9c91-4737-b772-4019e1288e32}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CallBackFuctionUI.h">
@@ -21,6 +33,24 @@
     <ClInclude Include="resource.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="Lib34_11_94\gost.h">
+      <Filter>Заголовочные файлы\Gost_34_11_94</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib34_11_2012\stribog.h">
+      <Filter>Заголовочные файлы\Gost_34_11_2012</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib34_11_2012\stribog_data.h">
+      <Filter>Заголовочные файлы\Gost_34_11_2012</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib34_11_2012\types.h">
+      <Filter>Заголовочные файлы\Gost_34_11_2012</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib34_11_94\mainGost34_11_94.h">
+      <Filter>Заголовочные файлы\Gost_34_11_94</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib34_11_2012\MainStribog.h">
+      <Filter>Заголовочные файлы\Gost_34_11_2012</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -28,6 +58,18 @@
     </ClCompile>
     <ClCompile Include="CallBackFuctionUI.cpp">
       <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="CallGostLib.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib34_11_94\gost.cpp">
+      <Filter>Файлы исходного кода\Gost_34_11_94</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib34_11_94\mainGost34_11_94.cpp">
+      <Filter>Файлы исходного кода\Gost_34_11_94</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib34_11_2012\stribog.cpp">
+      <Filter>Файлы исходного кода\Gost_34_11_2012</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,25 @@
 #include "CallBackFuctionUI.h"
 
 HINSTANCE g_hInstance;
+HWND g_hEditInput;
+HWND g_hEditOutput;
+
+void SelectGost(WPARAM wParam)
+{	
+	char* pMessage = new char[CHAR_MAX];
+	SendMessage(g_hEditInput, WM_GETTEXT, (WPARAM)255, (LPARAM)pMessage);
+	if (GostHandler(pMessage, (ListGostAlgoritm)CBN_SETFOCUS))
+	{
+		SendMessage(g_hEditOutput, WM_SETTEXT, 0, (LPARAM)pMessage);
+	}
+	delete pMessage;
+}
+
+void InitTexBox(HWND hWnd)
+{
+	g_hEditInput = GetDlgItem(hWnd, IDC_EDIT1_MESSAGE);
+	g_hEditOutput = GetDlgItem(hWnd, IDC_EDIT2_KEY);
+}
 
 void InitComboBox(HWND hWnd, UINT unIdComboBox)
 {
@@ -32,6 +51,11 @@ void CaseButton(WPARAM wParam, HWND hWnd)
 	case IDC_BUTTON_COMPARE_ALGORITM:
 		break;
 	case IDC_BUTTON_GENERATE_KEY:
+		SelectGost(wParam);
+		break;
+	case IDC_COMBO_GENERATE:
+		SetDlgItemText(hWnd, IDC_EDIT1_MESSAGE, "");
+		SetDlgItemText(hWnd, IDC_EDIT2_KEY, "");
 		break;
 	case IDC_BUTTON2_PREV:
 			EndDialog(hWnd, 0);
@@ -48,6 +72,7 @@ BOOL CALLBACK GenerateDlgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam
 	{
 	case WM_INITDIALOG:
 			InitComboBox(hWnd, IDC_COMBO_GENERATE);
+			InitTexBox(hWnd);
 		break;
 	case WM_COMMAND:
 			CaseButton(wParam, hWnd);
@@ -69,6 +94,7 @@ BOOL CALLBACK CompareDlgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	case WM_INITDIALOG:
 		InitComboBox(hWnd, IDC_COMBO1);
 		InitComboBox(hWnd, IDC_COMBO2);
+		InitTexBox(hWnd);
 		break;
 	case WM_COMMAND:
 			CaseButton(wParam, hWnd);

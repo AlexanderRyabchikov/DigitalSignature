@@ -20,10 +20,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CallBackFuctionUI.h" />
+    <ClInclude Include="Lib34_11_2012\MainStribog.h" />
+    <ClInclude Include="Lib34_11_2012\stribog.h" />
+    <ClInclude Include="Lib34_11_2012\stribog_data.h" />
+    <ClInclude Include="Lib34_11_2012\types.h" />
+    <ClInclude Include="Lib34_11_94\gost.h" />
+    <ClInclude Include="Lib34_11_94\mainGost34_11_94.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CallBackFuctionUI.cpp" />
+    <ClCompile Include="CallGostLib.cpp" />
+    <ClCompile Include="Lib34_11_2012\stribog.cpp" />
+    <ClCompile Include="Lib34_11_94\gost.cpp" />
+    <ClCompile Include="Lib34_11_94\mainGost34_11_94.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -41,6 +51,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -48,6 +59,7 @@
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
