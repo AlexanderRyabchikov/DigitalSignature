@@ -4,6 +4,9 @@
 #include <windows.h>
 #include "resource.h"
 #include <atlconv.h>
+#include <ctime>
+#include <iostream>
+#include <comutil.h>
 
 #include "Lib34_11_94\mainGost34_11_94.h"
 #include "Lib34_11_2012\MainStribog.h"
@@ -14,9 +17,9 @@
 using namespace SharpLibGost;
 using namespace Gost_34_10_2001;
 using namespace Gost34_10_94Lib;
+using namespace std;
 
 #define NUMBER_GOST_ALGORITM 5
-
 typedef enum LIST_GOST_ALGORITM
 {
 	GOST_34_10_94,

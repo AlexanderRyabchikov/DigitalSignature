@@ -1,1 +1,1 @@
-int Gost_34_112012(char* message);
+void Gost_34_112012(char* message);

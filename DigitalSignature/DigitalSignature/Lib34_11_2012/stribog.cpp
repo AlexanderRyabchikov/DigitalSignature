@@ -19,10 +19,10 @@ void print_hash(struct stribog_ctx_t *ctx, char* message)
 	u8 i;
 
 	for (i = 0; i < (ctx->size ? OUTPUT_SIZE_512 : OUTPUT_SIZE_256); i++)
-		snprintf(&message[i], sizeof(ctx->h[i]),"%02x", ctx->h[i]);
+		snprintf(&message[i], CHAR_MAX,"%x", ctx->h[i] ^ 0xFF);
 }
 
-int Gost_34_112012(char* message)
+void Gost_34_112012(char* message)
 {
 	struct stribog_ctx_t ctx;
 
@@ -30,6 +30,4 @@ int Gost_34_112012(char* message)
 	stribog(&ctx, (u8*)message, sizeof(message));
 
 	print_hash(&ctx, message);
-
-	return 0;
 }
